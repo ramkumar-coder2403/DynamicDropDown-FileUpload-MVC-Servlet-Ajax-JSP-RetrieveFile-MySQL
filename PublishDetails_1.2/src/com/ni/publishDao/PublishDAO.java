@@ -32,7 +32,7 @@ public class PublishDAO {
 			pst.setDate(5,model.getFromDate());
 			pst.setDate(6,model.getToDate());
 			pst.setBytes(7, model.getFile());
-			System.out.println(pst);
+//			System.out.println(pst);
 			success = pst.executeUpdate();
 			con.close();
 

@@ -64,7 +64,6 @@ public class SubmitServlet extends HttpServlet {
 		if (subCategoryId != 0)
 			subCategory = dao.selectSubCategory(subCategoryId);
 		
-		InputStream pdfFileBytes = null;
 		final PrintWriter writer = response.getWriter();
 
 		boolean checkFile = checkPdf(filePart);
@@ -74,6 +73,8 @@ public class SubmitServlet extends HttpServlet {
 			writer.println("<br> File size too big");
 			return;
 		} else {
+			//Convert Part file to byte[]
+			InputStream pdfFileBytes = null;
 			pdfFileBytes = filePart.getInputStream(); // to get the body of the request as binary data
 
 			final byte[] bytes = new byte[pdfFileBytes.available()];

@@ -4,7 +4,8 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file> 
+    <!-- <welcome-file>display_details.jsp</welcome-file> -->
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
@@ -24,5 +25,22 @@
 	<servlet-mapping>
 		<servlet-name>SubmitServlet</servlet-name>
 		<url-pattern>/SubmitServlet/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ViewServlet</servlet-name>
+		<servlet-class>com.nic.publishServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewServlet</servlet-name>
+		<url-pattern>/ViewServlet/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GenerateFile</servlet-name>
+		<servlet-class>com.nic.publishServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GenerateFile</servlet-name>
+		<url-pattern>/GenerateFile/*</url-pattern>
 	</servlet-mapping>
 </web-app>
